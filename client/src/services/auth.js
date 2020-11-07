@@ -1,4 +1,4 @@
-const url = process.env.REACT_APP_API_URL || '/';
+const url = process.env.REACT_APP_DEV || '/';
 
 function loginUser(formData) {
 
