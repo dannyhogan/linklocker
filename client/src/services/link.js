@@ -1,4 +1,4 @@
-const url = process.env.REACT_APP_DEV ? 'http://localhost:7890/' : '/';
+const url = process.env.REACT_APP_API_URL || '/';
 
 function createNewLink(formData) {
 
