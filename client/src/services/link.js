@@ -1,8 +1,8 @@
-const url = 'http://localhost:7890';
+const url = process.env.REACT_APP_DEV ? 'http://localhost:7890/' : '/';
 
 function createNewLink(formData) {
 
-  return fetch(url + "/api/v1/link/", {
+  return fetch(url + "api/v1/link/", {
     method: 'POST',
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(formData),
@@ -13,7 +13,7 @@ function createNewLink(formData) {
 
 function getUserLinks(username) {
 
-  return fetch(url + `/api/v1/link/${username}`, {
+  return fetch(url + `api/v1/link/${username}`, {
     method: 'GET',
     headers: { "Content-Type": "application/json" },
     credentials: 'include'
@@ -29,7 +29,7 @@ function getUserLinks(username) {
 
 function handleRedirect(link, password) {
 
-  return fetch(url + `/api/v1/link/${link._id}`, {
+  return fetch(url + `api/v1/link/${link._id}`, {
     method: 'POST',
     headers: {
       "Content-Type": "application/json", "Access-Control-Allow-Origin": "*"
