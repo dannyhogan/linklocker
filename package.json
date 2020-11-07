@@ -13,9 +13,6 @@
     "start": "node server.js",
     "start:watch": "nodemon server.js"
   },
-  "jest": {
-    "testEnvironment": "node"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
