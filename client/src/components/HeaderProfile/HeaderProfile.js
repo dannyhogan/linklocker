@@ -11,13 +11,16 @@ const HeaderProfile = () => {
 
   const handleLogout = () => {
     logOutUser()
-      .then(updateAuth(null));
+      .then(updateAuth({
+        isAuthenticated: false,
+        user: null
+      }));
   };
 
   return (
-    auth ?
+    auth.isAuthenticated ?
     <div className="HeaderProfile">
-      <p>@{auth.username}</p>
+      <p>@{auth.user.username}</p>
       <Button onClick={handleLogout}>Log Out</Button>
     </div>
     :

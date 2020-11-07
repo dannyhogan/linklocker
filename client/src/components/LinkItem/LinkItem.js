@@ -8,6 +8,7 @@ const LinkItem = ({ link, setActiveLink, selfProfile }) => {
   const handleLinkClick = () => {
     console.log('clicked', link)
 
+    
   }
 
   return (
@@ -16,11 +17,14 @@ const LinkItem = ({ link, setActiveLink, selfProfile }) => {
       <div className="link-container" onClick={handleLinkClick} href={link.url}>
         <p>{link.title}</p>
       </div>
-      <img
-        src={lockLogo}
-        alt="lock logo"
-        className={`lock ${link.isLocked ? 'locked' : 'unlocked'}`}
-      />
+
+      {link.isLocked && (
+        <img
+          src={lockLogo}
+          alt="lock logo"
+          className={`lock`}
+        />
+      )}
     </li>
   );
 }

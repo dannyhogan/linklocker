@@ -5,7 +5,7 @@ import SignUp from './components/SignUp/SignUp'
 import Login from './components/Login/Login'
 import Header from './components/Header/Header';
 import Profile from './components/Profile/Profile';
-import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+// import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
         <Route exact path="/" component={LandingPage} />
         <Route path="/signup" component={SignUp} />
         <Route path="/login" component={Login} />
-        <PrivateRoute path="/:username" component={Profile} />
+        <Route path="/:username" component={Profile} />
       </Switch>
     </div>
   );

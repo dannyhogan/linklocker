@@ -14,7 +14,7 @@ const SignUp = () => {
   });
 
   if(auth) {
-    return <Redirect to={`/${auth.username}`} />
+    return <Redirect to={`/${auth.user.username}`} />
   }
 
   const handleSubmit = async (event) => {

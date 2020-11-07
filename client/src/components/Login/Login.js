@@ -7,7 +7,7 @@ import { Button, TextField } from '@material-ui/core';
 
 const Login = () => {
 
-  const history  = useHistory();
+  const history = useHistory();
   const { updateAuth, auth } = useAuth();
 
   const [formData, setFormData] = useState({
@@ -21,12 +21,12 @@ const Login = () => {
     }
   }, [auth, history]);
 
-  const handleSubmit = async(event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault()
     const res = await loginUser(formData);
 
     if(res.username) {
-      updateAuth(res)
+      updateAuth({ user: res, isAuthenticated: true })
     }
   }
 
