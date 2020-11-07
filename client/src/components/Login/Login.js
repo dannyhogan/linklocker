@@ -16,8 +16,8 @@ const Login = () => {
   });
 
   useEffect(() => {
-    if(auth) {
-      history.push(`/${auth.username}`)
+    if(auth.isAuthenticated) {
+      history.push(`/${auth.user.username}`)
     }
   }, [auth, history]);
 
