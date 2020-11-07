@@ -7,6 +7,7 @@ import { getUserLinks } from '../../services/link'
 import { useAuth } from '../../context/auth'
 import LinkForm from '../LinkForm/LinkForm';
 import { Button } from '@material-ui/core';
+import SocialLinks from '../SocialLinks/SocialLinks';
 
 
 const Profile = () => {
@@ -21,9 +22,8 @@ const Profile = () => {
 
   useEffect(() => {
     setLoading(true);
-    console.log('!!')
 
-    if(username === auth.username) {
+    if(auth.isAuthenticated && username === auth.user.username) {
       setSelfProfile(true)
     } else {
       setSelfProfile(false)
@@ -54,11 +54,11 @@ const Profile = () => {
     <div className="Profile">
 
       <img className="profile-photo" src={profilePhoto} alt="User avatar" />
-      <h1>
+      <h2>
         <span>@</span>
         {username}
-      </h1>
-
+      </h2>
+      <SocialLinks />
       <LinksDisplay
         loading={loading}
         username={username}
