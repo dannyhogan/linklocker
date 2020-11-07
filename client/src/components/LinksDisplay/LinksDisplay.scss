@@ -10,13 +10,14 @@
     border: 2px solid grey;
     background-color: rgba(144, 144, 144, 0.1);
     list-style: none;
+    justify-content: center;
+    align-items: flex-start;
     display: flex;
     width: 90%;
-    height: 80%;
-    justify-content: center;
+    height: 60%;
     flex-wrap: wrap;
     overflow-y: scroll;
     overflow-x: hidden;
-    padding: 1rem 0;
+    padding: .5rem 0;
   }
 }

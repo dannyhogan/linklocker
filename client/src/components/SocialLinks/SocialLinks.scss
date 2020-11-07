@@ -1,0 +1,20 @@
+.SocialLinks {
+  width: 10rem;
+  list-style: none;
+  display: flex;
+  padding: 0;
+  align-items: center;
+  justify-content: space-evenly;
+
+  li {
+
+    a {
+      height: 50px;
+      width: 50px;
+
+      svg {
+        fill: #444444;
+      }
+    }
+  }
+}
