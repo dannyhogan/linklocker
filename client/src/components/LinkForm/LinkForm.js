@@ -12,30 +12,33 @@ const LinkForm = ({ setLinks, isOpen, toggleOpen }) => {
     isLocked: false,
     password: ''
   })
+
   const [showLinkPassword, toggleShowLinkPassword] = useState(false);
 
   const handleChange = ({ target }) => {
 
     if(target.name === 'isLocked') {
 
-      if(!target.checked) {
-        updateFormData(prevState => ({
-          ...prevState,
-          password: ''
-        }))
-      }
+      updateFormData(prevState => ({
+        ...prevState,
+        [target.name]: target.checked,
+        password: target.isChecked ? prevState.password : ''
+      }))
+
+    } else if(target.name === 'password') {
 
       updateFormData(prevState => ({
         ...prevState,
-        [target.name]: target.checked
-      }))
+        [target.name]: target.value.trim()
+      }));
 
     } else {
 
       updateFormData(prevState => ({
         ...prevState,
-        [target.name]: target.value.trim()
+        [target.name]: target.value
       }))
+
     }
   }
 
@@ -101,6 +104,7 @@ const LinkForm = ({ setLinks, isOpen, toggleOpen }) => {
           <TextField
             minLength={5}
             maxLength={25}
+            required={isLocked}
             variant="filled"
             onChange={handleChange}
             name="password"
