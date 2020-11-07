@@ -1,0 +1,99 @@
+.LinkForm {
+  border: 2px solid grey;
+  position: absolute;
+  background-color: #393B44;
+  border-radius: 20px;
+  height: 80%;
+  width: 90%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .close-form-button {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    border-color: white;
+    color: white;
+    font-weight: 900;
+    font-size: 1rem;
+    transition: all ease-out .3s;
+
+    &:hover {
+      transition: all ease-in .3s;
+      color: rgba(255, 83, 83, .5);
+      transform: scale(1.05);
+    }
+  }
+
+  h2 {
+    height: 10%;
+  }
+
+  form {
+    width: 80%;
+    height: 100%;
+    color: white;
+
+    input {
+      color: white;
+      outline-color: white;
+    }
+
+    label {
+      display: flex;
+      flex-direction: column;
+      margin: .75rem 0;
+    }
+
+    .checkbox {
+      margin: 0;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .password {
+      position: relative;
+      transition: all .25s ease-in;
+
+      .toggle {
+        position: absolute;
+        right: 5%;
+        top: 50%;
+        margin: auto 0;
+
+        svg {
+          transform: scale(1.25);
+          fill: rgba(255, 255, 255, 0.5);
+        }
+      }
+    }
+
+    .disabled {
+      opacity: 0.1;
+      transition: all .25s ease-out;
+    }
+
+    .submit-button{
+      margin-top: 1rem;
+      color: white;
+      border: 2px solid white;
+    }
+  }
+}
+
+.open {
+  opacity: 1;
+  transform: translateY(0%);
+  transition: all .5s ease-in;
+}
+
+.closed {
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all .5s ease-in;
+  pointer-events: none;
+}

@@ -1,0 +1,36 @@
+.Logo {
+
+  a {
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    justify-content: flex-start;
+
+    svg {
+      margin: 0;
+      transform: scale(.5);
+      .lock {
+        animation: lock .5s ease-in forwards;
+      }
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: white;
+      transform: translateX(-10px);
+
+      span {
+        font-weight: 100;
+      }
+    }
+  }
+}
+
+@keyframes lock {
+  from {
+    transform: translateY(-20%);
+  }
+  to {
+    transform: translateY(5%);
+  }
+}

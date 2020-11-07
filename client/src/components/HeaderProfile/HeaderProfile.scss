@@ -1,0 +1,35 @@
+.HeaderProfile {
+  display: flex;
+  justify-content:space-between;
+  height: 3rem;
+  width: 15rem;
+  border: 1px solid white;
+  border-radius: 10px;
+  align-items: center;
+  overflow: hidden;
+  position: absolute;
+  right: 2.5%;
+  transition: all .75s ease-in;
+  opacity: 1;
+
+
+  p {
+    color: white;
+    padding: .5rem;
+    overflow: hidden;
+    font-weight: 700;
+  }
+
+  button {
+    width: 40%;
+    height: 100%;
+    color: white;
+    background-color: #333333;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .HeaderProfile {
+    display: none;
+  }
+}
