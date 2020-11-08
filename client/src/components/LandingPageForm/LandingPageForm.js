@@ -21,14 +21,17 @@ const LandingPageForm = () => {
   return (
     <form onSubmit={handleSignUpSubmit} className="LandingPageForm">
       <label className="form-label">Create a free account today!
-      <TextField
-          inputProps={{ maxLength: 20 }}
-          label="linklocker.io/"
-          variant="outlined"
-          onChange={handleSignUpChange}
-          value={signUpInput} />
+      <div className="form-container">
+          <TextField
+            className="input"
+            inputProps={{ maxLength: 20 }}
+            label="linklocker.app/"
+            variant="outlined"
+            onChange={handleSignUpChange}
+            value={signUpInput} />
+          <Button className="submit" type="submit" variant="outlined">Go</Button>
+        </div>
       </label>
-      <Button type="submit" variant="outlined">Go</Button>
     </form>
   );
 }
