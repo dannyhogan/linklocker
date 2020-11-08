@@ -10,8 +10,10 @@ const SignUp = () => {
   const { state } = useLocation()
   const [formData, setFormData] = useState({
     username: state ? state.username : '',
-    password: ''
+    password: '',
+    verifiedPassword: ''
   });
+  const [signUpError, setSignUpError] = useState(null)
 
   if(auth.isAuthenticated) {
     return <Redirect to={`/${auth.user.username}`} />
@@ -19,8 +21,17 @@ const SignUp = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    await signUpUser(formData);
+    const { password, verifiedPassword } = formData;
+     
+    if(verifiedPassword !== password) {
+      setSignUpError('Password do not match, please try again.')
 
+      return;
+    }
+
+    const res = await signUpUser(formData);
+
+    console.log(res)
     window.location.reload();
   }
 
@@ -34,18 +45,19 @@ const SignUp = () => {
       <form onSubmit={handleSubmit}>
         <label>
           Username:
-          <TextField onChange={handleChange} name="username" value={formData.username} />
+          <TextField variant="outlined" onChange={handleChange} name="username" value={formData.username} />
         </label>
         <label>
           Password:
-          <TextField onChange={handleChange} name="password" value={formData.password} />
+          <TextField variant="outlined" onChange={handleChange} name="password" value={formData.password} />
         </label>
         <label>
           Verify Password:
-          <TextField onChange={handleChange} name="password" value={formData.password} />
+          <TextField variant="outlined" onChange={handleChange} name="verifiedPassword" value={formData.verifiedPassword} />
         </label>
         <Button className="submit" variant="outlined" type="submit">Sign Up</Button>
       </form>
+      {signUpError && <p className="sign-up-error">{signUpError}</p>}
     </div>
   );
 }

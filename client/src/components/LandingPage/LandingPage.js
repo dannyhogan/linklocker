@@ -10,7 +10,12 @@ const LandingPage = () => {
   return (
 
     <section className="LandingPage">
-      <h1>One page for all your links, stored securely.</h1>
+
+      <div className="cta">
+
+        <h1>One page for all of your links, stored securely.</h1>
+        <h3>Customize your profile, view analytics, and more!</h3>
+      </div>
 
       <LandingPageForm />
 
@@ -22,7 +27,7 @@ const LandingPage = () => {
             <Button variant="outlined">Sign Up</Button>
           </Link>
         </div>
-
+        <hr />
         <div className="auth-redirect-container">
           <h4>Existing user?</h4>
           <Link to="/login">
@@ -34,6 +39,9 @@ const LandingPage = () => {
       <Particles
         className="particles"
         params={{
+          "color": {
+            "value": ['#858585']
+          },
           "particles": {
             "number": {
               "value": 50

@@ -1,3 +1,10 @@
+$color1: #eeeeee;
+$color2: #00adb5;
+$color3: #393e46;
+$color4: #222831;
+
+
+
 .Logo {
 
   a {
@@ -5,18 +12,20 @@
     text-decoration: none;
     align-items: center;
     justify-content: flex-start;
+    animation: shrink .5s ease-in forwards;
 
     svg {
       margin: 0;
       transform: scale(.5);
       .lock {
-        animation: lock .5s ease-in forwards;
+        animation: lock .5s ease-in .1s forwards;
+        transform: translateY(-20%);
       }
     }
 
     h2 {
       font-size: 2rem;
-      color: white;
+      color: $color1;
       transform: translateX(-10px);
 
       span {
@@ -30,7 +39,18 @@
   from {
     transform: translateY(-20%);
   }
+
   to {
     transform: translateY(5%);
+  }
+}
+
+@keyframes shrink {
+  from {
+    transform: scale(2.5);
+  }
+
+  to {
+    transform: scale(1)
   }
 }

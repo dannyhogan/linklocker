@@ -1,27 +1,33 @@
+$color1: #eeeeee;
+$color2: #00adb5;
+$color3: #393e46;
+$color4: #222831;
+
 .Login {
   display: flex;
   align-items: center;
   flex-direction: column;
   width: 100vw;
   height: 100vh;
-  background-color: #d6e0f0;
+  background-color: $color3;
 
   h1 {
-    color: #13293d;
+    color: $color1;
+    animation: fade-in .6s ease-in forwards;
   }
 
   form {
     -webkit-animation: slide-in-fwd-bottom 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     animation: slide-in-fwd-bottom 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     border-radius: 10px;
-    border: 2px solid rgba(0, 0, 0, 0.5);
+    border: 2px solid $color2;
     height: 20rem;
     width: 20rem;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: space-evenly;
-    background-color: #006494;
+    background-color: $color4;
     color: white;
 
     label {
