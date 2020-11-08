@@ -40,13 +40,13 @@ const Login = () => {
       <form onSubmit={handleSubmit}>
         <label>
           Username:
-          <TextField onChange={handleChange} name="username" value={formData.username} />
+          <TextField className="input" variant="outlined" onChange={handleChange} name="username" value={formData.username} />
         </label>
         <label>
           Password:
-          <TextField onChange={handleChange} name="password" value={formData.password} />
+          <TextField className="input"  variant="outlined" onChange={handleChange} name="password" value={formData.password} />
         </label>
-        <Button type="submit">Login</Button>
+        <Button className="submit" variant="outlined" type="submit">Login</Button>
       </form>
     </div>
   );

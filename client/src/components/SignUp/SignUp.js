@@ -44,7 +44,7 @@ const SignUp = () => {
           Verify Password:
           <TextField onChange={handleChange} name="password" value={formData.password} />
         </label>
-        <Button variant="outlined" type="submit">Sign Up</Button>
+        <Button className="submit" variant="outlined" type="submit">Sign Up</Button>
       </form>
     </div>
   );
