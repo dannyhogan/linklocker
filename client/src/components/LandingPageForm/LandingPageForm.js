@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { TextField, Button } from '@material-ui/core';
 import { useHistory } from 'react-router-dom';
+import './LandingPageForm.scss'
 
 const LandingPageForm = () => {
 
@@ -18,7 +19,7 @@ const LandingPageForm = () => {
   }
 
   return (
-    <form onSubmit={handleSignUpSubmit} className="landing-page-form">
+    <form onSubmit={handleSignUpSubmit} className="LandingPageForm">
       <label className="form-label">Create a free account today!
       <TextField
           inputProps={{ maxLength: 20 }}
