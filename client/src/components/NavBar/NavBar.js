@@ -10,6 +10,18 @@ const NavBar = () => {
   const handleClick = () => toggleOpen((open) => !open);
   const { auth } = useAuth();
 
+  // const handleLogout = () => {
+  //   logOutUser()
+  //     .then(updateAuth({
+  //       isAuthenticated: false,
+  //       user: null
+  //     }));
+  // };
+
+  const handleNavClick = () => {
+    toggleOpen(open => !open)
+  }
+
   return (
     <div className="NavBar">
       <button className="toggle-button" onClick={handleClick}>
@@ -17,41 +29,41 @@ const NavBar = () => {
       </button>
       <nav className={`side-menu ${open ? "open" : "closed"}`}>
         <ul>
-          <li>
-            <NavLink to="/">Home</NavLink>
+          <li onClick={handleNavClick}>
+            <NavLink exact to="/">Home</NavLink>
           </li>
           {
             auth.isAuthenticated ?
               <>
-                <li>
+                <li onClick={handleNavClick}>
                   <NavLink to={`/${auth.user.username}`}>My Profile</NavLink>
                 </li>
-                <li>
+                <li onClick={handleNavClick}>
                   <NavLink to="/login">Edit Profile</NavLink>
                 </li>
-                <li>
+                <li onClick={handleNavClick}>
                   <NavLink to="/analytics">Analytics</NavLink>
                 </li>
-                <li>
+                <li onClick={handleNavClick}>
                   <NavLink to="/contact">Log Out</NavLink>
                 </li>
               </>
               :
               <>
-                <li>
+                <li onClick={handleNavClick}>
                   <NavLink to="/signup">Sign Up</NavLink>
                 </li>
-                <li>
+                <li onClick={handleNavClick}>
                   <NavLink to="/login">Login</NavLink>
                 </li>
-                <li>
+                <li onClick={handleNavClick}>
                   <NavLink to="/contact">Contact Us</NavLink>
                 </li>
               </>
           }
         </ul>
-      </nav >
-    </div >
+      </nav>
+    </div>
   );
 };
 
