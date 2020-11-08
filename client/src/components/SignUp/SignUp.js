@@ -13,7 +13,7 @@ const SignUp = () => {
     password: ''
   });
 
-  if(auth) {
+  if(auth.isAuthenticated) {
     return <Redirect to={`/${auth.user.username}`} />
   }
 
