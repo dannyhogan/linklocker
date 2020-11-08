@@ -10,6 +10,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  opacity: 1;
+  transform: translateY(0%);
+  transition: all .5s ease-in;
 
   .close-form-button {
     position: absolute;
@@ -86,13 +89,7 @@
   }
 }
 
-.open {
-  opacity: 1;
-  transform: translateY(0%);
-  transition: all .5s ease-in;
-}
-
-.closed {
+.LinkForm .closed {
   opacity: 0;
   transform: translateY(100%);
   transition: all .5s ease-in;
