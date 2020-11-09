@@ -49,11 +49,11 @@ const SignUp = () => {
         </label>
         <label>
           Password:
-          <TextField variant="outlined" onChange={handleChange} name="password" value={formData.password} />
+          <TextField type="password"variant="outlined" onChange={handleChange} name="password" value={formData.password} />
         </label>
         <label>
           Verify Password:
-          <TextField variant="outlined" onChange={handleChange} name="verifiedPassword" value={formData.verifiedPassword} />
+          <TextField type="password" variant="outlined" onChange={handleChange} name="verifiedPassword" value={formData.verifiedPassword} />
         </label>
         <Button className="submit" variant="outlined" type="submit">Sign Up</Button>
       </form>

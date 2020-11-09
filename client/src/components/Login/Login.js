@@ -44,7 +44,7 @@ const Login = () => {
         </label>
         <label>
           Password:
-          <TextField className="input"  variant="outlined" onChange={handleChange} name="password" value={formData.password} />
+          <TextField type="password" className="input"  variant="outlined" onChange={handleChange} name="password" value={formData.password} />
         </label>
         <Button className="submit" variant="outlined" type="submit">Login</Button>
       </form>

@@ -105,9 +105,11 @@ $color5: #33373d;
 
 @media screen and (max-width: 800px) {
   .LandingPage {
+    
     h1 {
       font-size: 2rem;
     }
+
     .auth-container {
       .auth-redirect-container {
         h4 {
