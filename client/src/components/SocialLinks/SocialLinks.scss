@@ -1,3 +1,8 @@
+$color1: #eeeeee;
+$color2: #00adb5;
+$color3: #393e46;
+$color4: #222831;
+
 .SocialLinks {
   width: 10rem;
   list-style: none;
@@ -13,7 +18,7 @@
       width: 50px;
 
       svg {
-        fill: #444444;
+        fill: $color1;
       }
     }
   }

@@ -12,10 +12,10 @@ $color4: #222831;
   margin: 0;
   padding: 0;
   pointer-events: none;
-  
+
   .toggle-button {
     pointer-events: all;
-    border: 3px solid $color1;
+    border: 1px solid $color1;
     position: fixed;
     top: 4.5%;
     right: 4.5%;
@@ -32,7 +32,7 @@ $color4: #222831;
 
     svg {
       fill: white;
-      transform: scale(2);
+      transform: scale(1);
     }
   }
 
@@ -103,7 +103,7 @@ $color4: #222831;
       }
     }
 
-    .Logo { 
+    .Logo {
       position: absolute;
       bottom: 0%;
       transform: scale(.75);
