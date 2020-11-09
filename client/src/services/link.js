@@ -26,7 +26,7 @@ function getUserLinks(username) {
     });
 }
 
-function handleRedirect(link, password) {
+function handleLinkClick(link, password) {
 
   return fetch(url + `api/v1/link/${link._id}`, {
     method: 'POST',
@@ -34,7 +34,15 @@ function handleRedirect(link, password) {
       "Content-Type": "application/json",
     },
     body: password ? JSON.stringify({ password }) : null,
-  });
+  })
+    .then(res => res.json())
+    .then(link => {
+      if(link.url) {
+        window.location.replace(link.url)
+      } else {
+        throw new Error('Invalid link password!');
+      }
+    })
 }
 
-export { createNewLink, getUserLinks, handleRedirect };
+export { createNewLink, getUserLinks, handleLinkClick };
