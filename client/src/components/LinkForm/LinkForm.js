@@ -64,7 +64,6 @@ const LinkForm = ({ setLinks, isOpen, toggleOpen }) => {
         X
       </Button>
 
-      <h2>Add Link:</h2>
       <form onSubmit={handleSubmit}>
 
         <label>
@@ -115,7 +114,7 @@ const LinkForm = ({ setLinks, isOpen, toggleOpen }) => {
             className="toggle"
             variant="outlined"
             onClick={() => toggleShowLinkPassword(state => !state)}
-          ><AiFillEye /></Button>
+          >{showLinkPassword ? 'Hide' : 'Show'}</Button>
         </label>
 
 
@@ -124,7 +123,7 @@ const LinkForm = ({ setLinks, isOpen, toggleOpen }) => {
           type="submit"
           variant="outlined"
         >
-          Create Link
+          Add Link
         </Button>
       </form>
     </div>
