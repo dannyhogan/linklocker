@@ -11,7 +11,13 @@ const LinksDisplay = ({ username, links, loading, selfProfile }) => {
   const [password, setPassword] = useState(false);
 
   const linkItems = links.map((link, i) => {
-    return <LinkItem setActiveLink={setActiveLink} key={i} link={link} selfProfile={selfProfile} />
+    return <LinkItem
+      setActiveLink={setActiveLink}
+      formOpen={formOpen}
+      toggleFormOpen={toggleFormOpen}
+      key={i}
+      link={link}
+      selfProfile={selfProfile} />
   })
 
 
