@@ -22,7 +22,7 @@ const SignUp = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     const { password, verifiedPassword } = formData;
-     
+
     if(verifiedPassword !== password) {
       setSignUpError('Password do not match, please try again.')
 
@@ -45,17 +45,37 @@ const SignUp = () => {
       <form onSubmit={handleSubmit}>
         <label>
           Username:
-          <TextField autocorrect="off" autocapitalize="none" variant="outlined" onChange={handleChange} name="username" value={formData.username} />
+          <TextField
+            inputProps={{ autoCapitalize: "none" }}
+            variant="outlined"
+            onChange={handleChange}
+            name="username"
+            value={formData.username} />
         </label>
         <label>
           Password:
-          <TextField type="password"variant="outlined" onChange={handleChange} name="password" value={formData.password} />
+          <TextField
+            type="password"
+            variant="outlined"
+            onChange={handleChange}
+            name="password"
+            value={formData.password} />
         </label>
         <label>
           Verify Password:
-          <TextField type="password" variant="outlined" onChange={handleChange} name="verifiedPassword" value={formData.verifiedPassword} />
+          <TextField
+            type="password"
+            variant="outlined"
+            onChange={handleChange}
+            name="verifiedPassword"
+            value={formData.verifiedPassword} />
         </label>
-        <Button className="submit" variant="outlined" type="submit">Sign Up</Button>
+        <Button
+          className="submit"
+          variant="outlined"
+          type="submit">
+          Sign Up
+        </Button>
       </form>
       {signUpError && <p className="sign-up-error">{signUpError}</p>}
     </div>
