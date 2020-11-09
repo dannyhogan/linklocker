@@ -30,6 +30,7 @@ $color5: #33373d;
     display: flex;
     justify-content: center;
     flex-direction: column;
+    overflow: hidden;
   }
 
   h1 {
@@ -41,8 +42,10 @@ $color5: #33373d;
     align-items: center;
     margin: 0;
     z-index: 1;
+    opacity: 0;
+    animation: fade-in .5s ease-in forwards;
   }
-
+  
   h3 {
     font-size: 1.5rem;
     font-weight: 200;
@@ -53,6 +56,8 @@ $color5: #33373d;
     align-items: center;
     margin: 0;
     z-index: 1;
+    animation: fade-in .5s ease-in .5s forwards;
+    opacity: 0;
   }
 
   .auth-container {
@@ -69,7 +74,7 @@ $color5: #33373d;
     hr {
       width: 5px;
       background-color: $color2;
-      height: 50%;
+      height: 75%;
       border: none;
       position: absolute;
     }

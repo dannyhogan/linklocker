@@ -40,7 +40,7 @@ const Login = () => {
       <form onSubmit={handleSubmit}>
         <label>
           Username:
-          <TextField className="input" variant="outlined" onChange={handleChange} name="username" value={formData.username} />
+          <TextField inputProps={{ autoCapitalize: "none" }} className="input" variant="outlined" onChange={handleChange} name="username" value={formData.username} />
         </label>
         <label>
           Password:

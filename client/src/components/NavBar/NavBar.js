@@ -41,13 +41,13 @@ const NavBar = () => {
                   <NavLink to={`/${auth.user.username}`}>My Profile</NavLink>
                 </li>
                 <li onClick={handleNavClick}>
-                  <NavLink to="/login">Edit Profile</NavLink>
+                  <NavLink to="/edit">Edit Profile</NavLink>
                 </li>
                 <li onClick={handleNavClick}>
                   <NavLink to="/analytics">Analytics</NavLink>
                 </li>
                 <li onClick={handleLogout}>
-                  <NavLink exact to="/">Log Out</NavLink>
+                  <Link exact to="/">Log Out</Link>
                 </li>
               </>
               :

@@ -15,6 +15,7 @@ $color4: #222831;
   h1 {
     color: $color1;
     animation: fade-in .6s ease-in forwards;
+    margin: 2rem 0;
   }
 
   form {
@@ -34,6 +35,12 @@ $color4: #222831;
     label {
       display: flex;
       flex-direction: column;
+    }
+
+    input {
+      color: $color1;
+      outline: none;
+      border: none;
     }
 
     .submit {

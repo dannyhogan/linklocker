@@ -45,7 +45,7 @@ const SignUp = () => {
       <form onSubmit={handleSubmit}>
         <label>
           Username:
-          <TextField variant="outlined" onChange={handleChange} name="username" value={formData.username} />
+          <TextField autocorrect="off" autocapitalize="none" variant="outlined" onChange={handleChange} name="username" value={formData.username} />
         </label>
         <label>
           Password:

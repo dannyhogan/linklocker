@@ -10,17 +10,18 @@ $color4: #222831;
   display: flex;
   flex-direction: column;
   align-items: center;
-  animation: fade-in 2s forwards;
   position: relative;
   overflow: hidden;
+  background-color: $color3;
 
   .profile-photo {
     margin-top: 1rem;
     width: 100px;
     min-height: 100px;
     border-radius: 100%;
-    border: 3px solid white;
+    border: 3px solid $color1;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    animation: fade-in 2s forwards;
   }
 
   .add-link-button {
@@ -32,7 +33,7 @@ $color4: #222831;
   h2  {
     margin: .5rem;
     padding: 0;
-    color: #444444;
+    color: $color1;
 
     span {
       opacity: .5;
