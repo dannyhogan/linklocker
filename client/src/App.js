@@ -4,7 +4,7 @@ import { Switch, Route } from 'react-router-dom'
 import SignUp from './containers/SignUp/SignUp'
 import Login from './containers/Login/Login'
 import Header from './components/Header/Header';
-import Profile from './components/Profile/Profile';
+import Profile from './containers/Profile/Profile';
 import Contact from './containers/Contact/Contact';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import NavBar from './components/NavBar/NavBar';

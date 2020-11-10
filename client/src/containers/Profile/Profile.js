@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import './Profile.scss'
 import profilePhoto from '../../assets/profile.jpg';
-import LinksDisplay from '../LinksDisplay/LinksDisplay';
+import LinksDisplay from '../../components/LinksDisplay/LinksDisplay';
 import { useParams } from 'react-router-dom';
 import { getUserLinks } from '../../services/link'
 import { useAuth } from '../../context/auth'
-import LinkForm from '../LinkForm/LinkForm';
+import LinkForm from '../../components/LinkForm/LinkForm';
 import { Button } from '@material-ui/core';
-import SocialLinks from '../SocialLinks/SocialLinks';
-
+import SocialLinks from '../../components/SocialLinks/SocialLinks';
 
 const Profile = () => {
   const { username } = useParams();
