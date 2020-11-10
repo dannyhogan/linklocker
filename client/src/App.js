@@ -9,6 +9,7 @@ import Contact from './containers/Contact/Contact';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import NavBar from './components/NavBar/NavBar';
 import EditProfile from './containers/EditProfile/EditProfile';
+import Analytics from './containers/Analytics/Analytics';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/signup" component={SignUp} />
         <Route path="/login" component={Login} />
         <PrivateRoute path="/edit" component={EditProfile} />
+        <PrivateRoute path="/analytics" component={Analytics} />
         <Route path="/:username" component={Profile} />
       </Switch>
     </div>
