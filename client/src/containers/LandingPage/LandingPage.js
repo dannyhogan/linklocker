@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './LandingPage.scss'
 import { Button } from '@material-ui/core';
-import LandingPageForm from '../LandingPageForm/LandingPageForm';
+import LandingPageForm from '../../components/LandingPageForm/LandingPageForm';
 import Particles from 'react-particles-js';
 
 const LandingPage = () => {
@@ -10,7 +10,6 @@ const LandingPage = () => {
   return (
 
     <section className="LandingPage">
-
       <div className="cta">
 
         <h1>One page for all of your links, stored securely.</h1>

@@ -4,8 +4,6 @@ $color3: #393e46;
 $color4: #222831;
 $color5: #33373d;
 
-
-
 .LandingPage {
   height: 85%;
   width: 100%;
@@ -45,7 +43,7 @@ $color5: #33373d;
     opacity: 0;
     animation: fade-in .5s ease-in forwards;
   }
-  
+
   h3 {
     font-size: 1.5rem;
     font-weight: 200;
@@ -70,7 +68,7 @@ $color5: #33373d;
     z-index: 2;
     background-color: $color4;
     position: relative;
-    
+
     hr {
       width: 5px;
       background-color: $color2;
@@ -110,7 +108,7 @@ $color5: #33373d;
 
 @media screen and (max-width: 800px) {
   .LandingPage {
-    
+
     h1 {
       font-size: 2rem;
     }
