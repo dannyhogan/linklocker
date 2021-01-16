@@ -8,4 +8,31 @@ $color4: #222831;
   width: 100%;
   height: 100%;
   background-color: $color3;
+
+  h2 {
+    color: $color1;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+
+    label {
+      color: $color1;
+      border: 1px solid lime;
+      display: block;
+
+      .select {
+        color: $color1;
+        
+        option {
+          color: $color1;
+        }
+      }
+
+      .text-input {
+       display: block;
+      }
+    }
+  }
 }
